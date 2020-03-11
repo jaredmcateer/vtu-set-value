@@ -1,0 +1,18 @@
+{
+  "name": "vtu-set-value",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/test-utils": "^1.0.0-beta.32",
+    "jsdom": "^16.2.1",
+    "jsdom-global": "^3.0.2",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
