@@ -29,11 +29,13 @@ const lazy = wrapper.find('.lazy');
 regular.setValue('regular');
 lazy.setValue('lazy');
 
-assert.strictEqual(wrapper.vm.$data.regular, 'regular');
-assert.strictEqual('lazy', wrapper.vm.$data.lazy);
+assert.strictEqual(wrapper.vm.$data.regular, 'regular'); // - OK!
 
 
-lazy.trigger('change');
-assert.strictEqual(wrapper.vm.$data.lazy, 'lazy');
+assert.strictEqual(wrapper.vm.$data.lazy, 'lazy'); // - FAIL!
+
+
+lazy.trigger('change'); // Must be called for model update to occur
+assert.strictEqual(wrapper.vm.$data.lazy, 'lazy'); // - OK
 
 process.stdout.write("Tests complete.\n");
